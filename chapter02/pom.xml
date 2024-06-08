@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>springdata-onhibernate</artifactId>
+    <groupId>com.manning.springdata.hibernate</groupId>
+    <version>0.0.1</version>
+  </parent>
+
+  <groupId>com.manning.springdata.hibernate.chapter02</groupId>
+  <artifactId>chapter02</artifactId>
+  <version>0.0.1</version>
+
+  <name>Java Persistence :: Spring Data :: Hibernate :: Chapter 02</name>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>2.7.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>5.6.15.Final</version>
+    </dependency>
+
+  </dependencies>
+
+</project>
