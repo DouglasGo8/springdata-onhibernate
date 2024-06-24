@@ -1,5 +1,6 @@
 package com.manning.springdata.hibernate.chapter02;
 
+import com.manning.springdata.hibernate.chapter02.model.Message;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -14,6 +15,7 @@ public class HelloWorldHibernateTest {
   private static SessionFactory createSessionFactory() {
     var conf = new Configuration();
     conf.configure().addAnnotatedClass(Message.class);
+    //conf.configure().configure("hibernate.cfg.xml");
     var serviceRegistry = new StandardServiceRegistryBuilder()
             .applySettings(conf.getProperties()).build();
     //
@@ -36,7 +38,10 @@ public class HelloWorldHibernateTest {
       //
       session.beginTransaction();
       var criteriaQuery = session.getCriteriaBuilder().createQuery(Message.class);
+      // (N) Call the getResultList() method of the query object to get the results.
+      // The query that is created and executed will be SELECT * FROM MESSAGE.
       criteriaQuery.from(Message.class);
+      //
       var listOf = session.createQuery(criteriaQuery).getResultList();
       //
       session.getTransaction().commit();

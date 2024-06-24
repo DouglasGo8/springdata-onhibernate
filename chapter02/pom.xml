@@ -5,12 +5,12 @@
   <parent>
     <artifactId>springdata-onhibernate</artifactId>
     <groupId>com.manning.springdata.hibernate</groupId>
-    <version>0.0.1</version>
+    <version>1.0</version>
   </parent>
 
   <groupId>com.manning.springdata.hibernate.chapter02</groupId>
   <artifactId>chapter02</artifactId>
-  <version>0.0.1</version>
+  <version>1.0</version>
 
   <name>Java Persistence :: Spring Data :: Hibernate :: Chapter 02</name>
 
@@ -19,15 +19,16 @@
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-jpa</artifactId>
-      <version>2.7.0</version>
+      <version>2.7.18</version>
     </dependency>
 
     <dependency>
-      <groupId>org.hibernate</groupId>
+      <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
-      <version>5.6.15.Final</version>
+      <version>6.0.0.Alpha7</version>
     </dependency>
 
   </dependencies>
+
 
 </project>

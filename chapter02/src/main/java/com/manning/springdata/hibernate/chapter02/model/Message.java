@@ -1,4 +1,4 @@
-package com.manning.springdata.hibernate.chapter02;
+package com.manning.springdata.hibernate.chapter02.model;
 
 
 import lombok.Data;

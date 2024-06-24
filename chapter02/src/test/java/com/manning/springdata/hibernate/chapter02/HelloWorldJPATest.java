@@ -1,5 +1,6 @@
 package com.manning.springdata.hibernate.chapter02;
 
+import com.manning.springdata.hibernate.chapter02.model.Message;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 

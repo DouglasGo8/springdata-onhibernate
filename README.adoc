@@ -1,6 +1,6 @@
 = Java Persistence with Spring Data and Hibernate
 
-IMPORTANT: JDK v17
+IMPORTANT: JDK v21
 
 == Links
 

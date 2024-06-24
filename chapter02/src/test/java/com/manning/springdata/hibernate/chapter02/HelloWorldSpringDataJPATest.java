@@ -2,6 +2,7 @@ package com.manning.springdata.hibernate.chapter02;
 
 
 import com.manning.springdata.hibernate.chapter02.config.DBConfig;
+import com.manning.springdata.hibernate.chapter02.model.Message;
 import com.manning.springdata.hibernate.chapter02.repo.MessageRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
