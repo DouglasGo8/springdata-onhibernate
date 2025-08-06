@@ -1,10 +1,9 @@
 package com.manning.springdata.hibernate.chapter02;
 
 import com.manning.springdata.hibernate.chapter02.model.Message;
+import jakarta.persistence.Persistence;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-
-import javax.persistence.Persistence;
 
 
 import static org.junit.jupiter.api.Assertions.assertAll;

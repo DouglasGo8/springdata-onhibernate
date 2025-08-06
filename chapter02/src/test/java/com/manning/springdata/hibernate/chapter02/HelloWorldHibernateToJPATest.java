@@ -1,11 +1,12 @@
 package com.manning.springdata.hibernate.chapter02;
 
 import com.manning.springdata.hibernate.chapter02.model.Message;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import org.hibernate.cfg.Configuration;
 import org.junit.jupiter.api.Test;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+
 import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.assertAll;

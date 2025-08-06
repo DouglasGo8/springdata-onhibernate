@@ -6,6 +6,8 @@ IMPORTANT: JDK v21
 
 - https://github.com/ctudose/java-persistence-spring-data-hibernate[GitHub Book]
 
+- https://hibernate.org/orm/documentation/getting-started/5.x/[Hibernate Getting Started]
+
 == Understanding ORM and Persistence, _Concepts_
 
 * SQL is used as a data definition language *(DDL)*, with syntax for creating, altering, and dropping artifacts such as tables and constraints in the catalog of the DBMS.
@@ -65,7 +67,6 @@ for it as a proxy class with generated methods that interact with the database.
 takes care of most of the burden.
 
 |===
-
 
 .Insert execution times by framework (times in ms)
 [%header,cols=4*]
@@ -139,6 +140,7 @@ takes care of most of the burden.
 
 .Delete execution times by framework (times in ms)
 Number of records Hibernate JPA
+
 [%header,cols=4*]
 |===
 |Number of records
@@ -161,19 +163,35 @@ Number of records Hibernate JPA
 |50,000 |12,857 |12,768 |79,799
 |===
 
-The three approaches provide different performances. Hibernate and JPA go head to
-head—the graphics of their times almost overlap for all four operations (insert,
-update, select, and delete). Even though JPA comes with its own API on top of Hibernate,
-this additional layer introduces no overhead.
+The three approaches provide different performances.
+Hibernate and JPA go head to head—the graphics of their times almost overlap for all four operations (insert, update, select, and delete).
+Even though JPA comes with its own API on top of Hibernate, this additional layer introduces no overhead.
 
-The execution times of Spring Data JPA insertions start at about 2 times those of
-Hibernate and JPA for 1,000 records and go to about 3.5 times more for 50,000
-records. The overhead of the Spring Data JPA framework is considerable
+The execution times of Spring Data JPA insertions start at about 2 times those of Hibernate and JPA for 1,000 records and go to about 3.5 times more for 50,000 records.
+The overhead of the Spring Data JPA framework is considerable
 
-Using Spring Data JPA is mainly justified in particular situations: if the project
-already uses the Spring framework and needs to rely on its existing paradigm (such as
-inversion of control or automatically managed transactions), or if there is a strong need
-to decrease the amount of code and thus shorten the development time #(nowadays it
-is cheaper to acquire more computing power than to acquire more developers).#
+Using Spring Data JPA is mainly justified in particular situations: if the project already uses the Spring framework and needs to rely on its existing paradigm (such as inversion of control or automatically managed transactions), or if there is a strong need to decrease the amount of code and thus shorten the development time #(nowadays it is cheaper to acquire more computing power than to acquire more developers).#
 
-image::thumbs/overview-jpa_vs_hibernate_operations.png[]
+image::architecture/thumbs/overview-jpa_vs_hibernate_operations.png[]
+
+== Domain models and metadata
+
+.Persistent classes of the CaveatEmptor domain model and their relationships
+image:architecture/thumbs/bid-system.drawio.png[]
+
+.ORM without a domain model
+****
+#Object persistence with full ORM is most suitable for applications based on a rich domain model.# If your application doesn’t implement complex business rules or complex interactions between entities, or if you have few entities, you may not need a domain model.
+
+Many simple and some not-so-simple problems are perfectly suited to table-oriented solutions, where the application is designed around the database data model instead of around an object-oriented domain model and the logic is often executed in the database (with stored procedures).
+
+It’s also worth considering the learning curve: once you’re proficient with Hibernate and Spring Data, you’ll use them for all applications—even something as a simple SQL query generator and result mapper.
+If you’re just learning ORM, a trivial use case may not justify the time and overhead involved.
+****
+
+> Hibernate isn’t a Jakarta EE runtime environment, and it’s not an application server.
+It’s an implementation of the ORM technique.
+
+> Supporting fine-grained and rich domain models is a major Hibernate objective.
+This is one reason we work with POJOs.
+In general, using fine-grained objects means having more classes than tables.
