@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project
-        xmlns="http://maven.apache.org/POM/4.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>com.manning.springdata.hibernate</groupId>
   <artifactId>springdata-onhibernate</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
-
   <name>Java Persistence :: Spring Data :: Hibernate</name>
-
   <properties>
     <skipTests>false</skipTests>
     <jdk.version>21</jdk.version>
@@ -20,17 +13,18 @@
     <!--
     <invoker>${skipTests}</invoker><spring-boot.version>3.2.1</spring-boot.version>
     -->
+    <!--
     <hibernate.core.version>6.6.15.Final</hibernate.core.version>
-    <hibernate.validator.version>8.0.2.Final</hibernate.validator.version>
+    -->
+    <hibernate.core.version>7.1.0.Final</hibernate.core.version>
+    <hibernate.validator.version>9.0.1.Final</hibernate.validator.version>
     <!-- Maven -->
     <maven-invoker-plugin-version>3.9.0</maven-invoker-plugin-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven-surefire-plugin-version>3.5.3</maven-surefire-plugin-version>
     <maven-failsafe-plugin-version>3.5.3</maven-failsafe-plugin-version>
     <maven-compiler-plugin-version>3.14.0</maven-compiler-plugin-version>
-
   </properties>
-
   <repositories>
     <repository>
       <id>maven_central</id>
@@ -38,11 +32,9 @@
       <url>https://repo.maven.apache.org/maven2/</url>
     </repository>
   </repositories>
-
   <dependencyManagement>
     <dependencies/>
   </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>org.hibernate</groupId>
@@ -90,7 +82,6 @@
       <version>${junit-version}</version>
       <scope>test</scope>
     </dependency>
-
   </dependencies>
   <build>
     <plugins>
@@ -142,6 +133,6 @@
   <modules>
     <module>chapter02</module>
     <module>chapter03</module>
+    <module>chapter04</module>
   </modules>
-
 </project>

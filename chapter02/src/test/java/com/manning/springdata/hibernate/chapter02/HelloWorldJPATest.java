@@ -19,9 +19,7 @@ public class HelloWorldJPATest {
   @Test
   public void storeLoadMessage() {
 
-    var emf = Persistence.createEntityManagerFactory("chapter02");
-
-    try {
+    try (var emf = Persistence.createEntityManagerFactory("chapter02")) {
       var em = emf.createEntityManager();
       em.getTransaction().begin();
 
@@ -50,8 +48,6 @@ public class HelloWorldJPATest {
 
       em.close();
 
-    } finally {
-      emf.close();
     }
   }
 }

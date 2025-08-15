@@ -26,7 +26,7 @@ public class DBConfig {
 
     var dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("org.postgresql.Driver");
-    dataSource.setUrl("jdbc:postgresql://localhost/postgres");
+    dataSource.setUrl("jdbc:postgresql://localhost/prospringdb");
     dataSource.setUsername("guest");
     dataSource.setPassword("welcome1");
     return dataSource;

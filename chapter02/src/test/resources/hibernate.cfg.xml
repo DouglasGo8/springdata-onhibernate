@@ -5,7 +5,7 @@
 <hibernate-configuration>
   <session-factory>
     <property name="connection.driver_class">org.postgresql.Driver</property>
-    <property name="hibernate.connection.url">jdbc:postgresql://localhost/postgres</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost/prospringdb</property>
     <property name="hibernate.connection.username">guest</property>
     <property name="hibernate.connection.password">welcome1</property>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>

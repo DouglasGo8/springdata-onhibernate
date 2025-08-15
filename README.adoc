@@ -8,6 +8,8 @@ IMPORTANT: JDK v21
 
 - https://hibernate.org/orm/documentation/getting-started/5.x/[Hibernate Getting Started]
 
+- https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/[Hibernate Validator 9.0.1.Final - Jakarta Validation Reference Implementation: Reference Guide]
+
 == Understanding ORM and Persistence, _Concepts_
 
 * SQL is used as a data definition language *(DDL)*, with syntax for creating, altering, and dropping artifacts such as tables and constraints in the catalog of the DBMS.
